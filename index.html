@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7f4" />
+    <meta
+      name="description"
+      content="FrameSpace — a curated photography gallery celebrating beautiful moments."
+    />
+    <title>FrameSpace — Stories in Every Frame</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="#" class="logo">Frame<span>Space.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a href="#gallery" class="nav-cta">Explore Gallery <span>↗</span></a>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> A CURATED VISUAL JOURNAL</div>
+
+          <h1>
+            Stories captured.<br />
+            <em>Moments remembered.</em>
+          </h1>
+
+          <p>
+            Discover the beauty of our world through a collection of inspiring
+            photographs, unforgettable places and extraordinary everyday
+            moments.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#gallery" class="primary-btn"
+              >Explore the collection <span>↓</span></a
+            >
+            <span class="hero-note">A little inspiration for your day.</span>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85"
+            alt="Beautiful mountain lake surrounded by nature"
+          />
+          <div class="image-label">
+            <span>01 / FEATURED</span>
+            <strong>Nature's quiet beauty</strong>
+          </div>
+        </div>
+
+        <div class="hero-decoration">FRAMES OF LIFE · EST. 2026</div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-top">
+          <div>
+            <div class="eyebrow"><span></span> THE COLLECTION</div>
+            <h2>Explore the <em>gallery.</em></h2>
+            <p class="section-description">
+              A collection of places, people and moments worth remembering.
+            </p>
+          </div>
+          <div class="photo-total" id="photoCount">12 photographs</div>
+        </div>
+
+        <div class="gallery-toolbar">
+          <div class="filters" role="group" aria-label="Filter photographs">
+            <button class="filter-btn active" data-filter="all">
+              All work
+            </button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">
+              Architecture
+            </button>
+            <button class="filter-btn" data-filter="travel">Travel</button>
+            <button class="filter-btn" data-filter="people">People</button>
+          </div>
+
+          <label class="search-box">
+            <span>⌕</span>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search photographs..."
+              aria-label="Search photographs"
+            />
+          </label>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <p class="empty-message" id="emptyMessage" hidden>
+          No photographs found. Try another search.
+        </p>
+      </section>
+
+      <section class="quote-section">
+        <span class="quote-mark">“</span>
+        <h2>Photography is the art<br />of making <em>moments last.</em></h2>
+        <p>LOOK CLOSER. FEEL MORE. REMEMBER FOREVER.</p>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85"
+            alt="Golden sunrise over a peaceful landscape"
+          />
+        </div>
+
+        <div class="about-content">
+          <div class="eyebrow"><span></span> OUR STORY</div>
+          <h2>Finding beauty in the <em>little things.</em></h2>
+          <p>
+            FrameSpace is a creative photography gallery built to celebrate the
+            world around us. From quiet landscapes to lively city streets, every
+            photograph has a story waiting to be discovered.
+          </p>
+          <a href="#gallery" class="text-link">Discover more photographs ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="logo">Frame<span>Space.</span></a>
+      <p>Collect moments, not just photographs.</p>
+      <span>© 2026 FrameSpace. All rights reserved.</span>
+    </footer>
+
+    <!-- Image preview -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button
+        class="close-btn"
+        id="closeLightbox"
+        aria-label="Close image preview"
+      >
+        ×
+      </button>
+      <button
+        class="lightbox-arrow previous"
+        id="previousImage"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="" />
+        <div class="lightbox-caption">
+          <span id="lightboxCategory"></span>
+          <p id="lightboxCaption"></p>
+          <small id="lightboxCounter"></small>
+        </div>
+      </div>
+
+      <button
+        class="lightbox-arrow next"
+        id="nextImage"
+        aria-label="Next image"
+      >
+        ›
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
